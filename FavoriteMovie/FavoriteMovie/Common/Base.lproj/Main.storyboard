@@ -20,18 +20,18 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r8N-yd-tXG" userLabel="Name of the Movie">
                                 <rect key="frame" x="20" y="64" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uxo-xx-n1y">
                                 <rect key="frame" x="20" y="118" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" textContentType="date-time"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gsN-X2-uIA">
                                 <rect key="frame" x="130" y="192" width="154" height="31"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                <buttonConfiguration key="configuration" style="plain" title="Add">
                                     <color key="baseForegroundColor" systemColor="systemGroupedBackgroundColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -39,24 +39,24 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jhm-o9-ilr">
-                                <rect key="frame" x="20" y="248" width="374" height="594"/>
+                                <rect key="frame" x="10" y="248" width="394" height="594"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="XWe-tJ-STf" customClass="MovieTableViewCell" customModule="FavoriteMovie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="374" height="42"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="394" height="42"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XWe-tJ-STf" id="oVp-CI-N0R" customClass="TableViewCell" customModule="FavoriteMovie" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="42"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="42"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emr-zu-mdP" userLabel="Name">
-                                                    <rect key="frame" x="15" y="10" width="42" height="21"/>
+                                                    <rect key="frame" x="20" y="10" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAb-8A-UP2" userLabel="Year">
-                                                    <rect key="frame" x="319" y="10" width="42" height="21"/>
+                                                    <rect key="frame" x="352" y="10" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -64,9 +64,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="eAb-8A-UP2" secondAttribute="bottom" constant="11" id="A4B-Uv-KnE"/>
-                                                <constraint firstAttribute="trailing" secondItem="eAb-8A-UP2" secondAttribute="trailing" constant="13" id="BDf-iC-VYj"/>
+                                                <constraint firstAttribute="trailing" secondItem="eAb-8A-UP2" secondAttribute="trailing" id="BDf-iC-VYj"/>
                                                 <constraint firstItem="eAb-8A-UP2" firstAttribute="top" secondItem="oVp-CI-N0R" secondAttribute="top" constant="10" id="bZA-FQ-OrC"/>
-                                                <constraint firstItem="emr-zu-mdP" firstAttribute="leading" secondItem="oVp-CI-N0R" secondAttribute="leading" constant="15" id="crw-DX-zoQ"/>
+                                                <constraint firstItem="emr-zu-mdP" firstAttribute="leading" secondItem="oVp-CI-N0R" secondAttribute="leading" constant="20" id="crw-DX-zoQ"/>
                                                 <constraint firstItem="emr-zu-mdP" firstAttribute="top" secondItem="oVp-CI-N0R" secondAttribute="top" constant="10" id="kGF-0o-wcT"/>
                                                 <constraint firstAttribute="bottom" secondItem="emr-zu-mdP" secondAttribute="bottom" constant="11" id="yu9-yc-BRP"/>
                                             </constraints>
@@ -87,14 +87,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jhm-o9-ilr" secondAttribute="bottom" constant="20" id="FjL-G4-hmd"/>
                             <constraint firstItem="r8N-yd-tXG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Hd8-7C-B1k"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gsN-X2-uIA" secondAttribute="trailing" constant="130" id="Q8d-e6-Ljm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jhm-o9-ilr" secondAttribute="trailing" constant="20" id="Vqx-6A-1hM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jhm-o9-ilr" secondAttribute="trailing" constant="10" id="Vqx-6A-1hM"/>
                             <constraint firstItem="Uxo-xx-n1y" firstAttribute="top" secondItem="r8N-yd-tXG" secondAttribute="bottom" constant="20" id="Ysc-PM-MsV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uxo-xx-n1y" secondAttribute="trailing" constant="20" id="cAt-iO-xxN"/>
                             <constraint firstItem="gsN-X2-uIA" firstAttribute="top" secondItem="Uxo-xx-n1y" secondAttribute="bottom" constant="40" id="eLk-ax-R5C"/>
                             <constraint firstItem="Jhm-o9-ilr" firstAttribute="top" secondItem="gsN-X2-uIA" secondAttribute="bottom" constant="25" id="hm3-ko-XHt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r8N-yd-tXG" secondAttribute="trailing" constant="20" id="nRb-y3-ie7"/>
                             <constraint firstItem="gsN-X2-uIA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="qCd-KR-rgg"/>
-                            <constraint firstItem="Jhm-o9-ilr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="v2F-bx-I1T"/>
+                            <constraint firstItem="Jhm-o9-ilr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="v2F-bx-I1T"/>
                         </constraints>
                     </view>
                     <connections>

@@ -6,8 +6,8 @@
 //
 
 import Foundation
-struct Movie{
+struct Movie: Hashable{
     var name: String
-    var year: String
+    var year: Int
 }
 
