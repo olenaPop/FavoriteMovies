@@ -14,7 +14,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableMovie.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MovieTableViewCell
-        let movie = Array(favoritMoviearray)[indexPath.row]
+        let movie = favoritMoviearray[indexPath.row] as! Movie
         cell.nameLbl.text = movie.name
         cell.yearLbl.text = String(movie.year)
         return cell

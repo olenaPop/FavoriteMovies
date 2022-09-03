@@ -14,17 +14,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var yearOfMovie: UITextField!
     @IBOutlet weak var addButton: UIButton!
     
-    var favoritMoviearray: Set<Movie> = []
+    var favoritMoviearray = NSMutableOrderedSet()
 
     @IBAction func addMovie(_ sender: Any) {
         let yearStrToInt = Int(yearOfMovie.text ?? "" )
         let newMovie = Movie(name: nameOfMovie.text ?? "Unknown",year: yearStrToInt ?? 00  )
-        favoritMoviearray.insert(newMovie)
+        favoritMoviearray.add(newMovie)
         nameOfMovie.text = ""
         yearOfMovie.text = ""
+        insertRow()
+        
+    }
+    func insertRow(){
+        tableMovie.beginUpdates()
         tableMovie.insertRows(at: [IndexPath(row: favoritMoviearray.count - 1, section: 0)], with: .bottom)
-        
-        
+        tableMovie.endUpdates()
     }
  
     override func viewDidLoad() {
